@@ -1,3 +1,5 @@
+import "./style.css";
+
 // botões
 const btnGenerate = document.getElementById("btnGenerate");
 const btnCopy = document.getElementById("btnCopy");
