@@ -13,6 +13,9 @@ body {
   height: 100vh;
   background-color: #ccc;
 }
+a {
+  text-decoration: none;
+}
 
 .wrapper {
   display: flex;
@@ -89,4 +92,23 @@ input[type="number"] {
   position: relative !important;
   /*top: .125em !Important;*/
   margin-right: 0.6em !important;
+}
+
+.box-repositor {
+  margin-top: 2rem;
+  text-align: center;
+}
+.box-repositor i {
+  color: #2980b9;
+  font-size: 3rem;
+}
+.box-repositor a {
+  display: block;
+  color: #2980b9;
+}
+.normalize-icon [class^="fa-"]:before,
+.normalize-icon [class*=" fa-"]:before {
+  position: relative !important;
+  /* top: 0.125em !Important; */
+  margin-right: 0 !important;
 }
