@@ -12,22 +12,22 @@ const number = document.getElementById("number");
 const symbol = document.getElementById("symbol");
 const result = document.getElementById("result");
 
-function getRandomLower() {
+const getRandomLower = () => {
   const charLower = "abcdefghijlmnopqrstuvwxyz";
   return charLower[Math.floor(Math.random() * charLower.length)];
-}
-function getRandomUppercase() {
+};
+const getRandomUppercase = () => {
   const charUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   return charUpper[Math.floor(Math.random() * charUpper.length)];
-}
-function getRandomNumber() {
+};
+const getRandomNumber = () => {
   const num = "0123456789";
   return num[Math.floor(Math.random() * num.length)];
-}
-function getRandomSymbol() {
+};
+const getRandomSymbol = () => {
   const symbols = "!@#$%^&*()[]{}=<>/,.";
   return symbols[Math.floor(Math.random() * symbols.length)];
-}
+};
 
 const randomChar = {
   lower: getRandomLower,
@@ -43,7 +43,7 @@ btnGenerate.addEventListener("click", () => {
   const hasNumber = number.checked;
   const hasSymbol = symbol.checked;
 
-  result.innerText = generatePasswd(
+  result.value = generatePasswd(
     haslower,
     hasUpper,
     hasNumber,
@@ -52,10 +52,9 @@ btnGenerate.addEventListener("click", () => {
   );
 });
 
-function generatePasswd(lower, upper, number, symbol, lenght) {
+const generatePasswd = (lower, upper, number, symbol, lenght) => {
   let gPasswd = "";
 
-  const typesCount = lower + upper + number + symbol; // variavel opcional para evitar que o script rode varias vezes
   const typesArr = [{ lower }, { upper }, { number }, { symbol }].filter(
     (item) => {
       return Object.values(item)[0];
@@ -71,7 +70,7 @@ function generatePasswd(lower, upper, number, symbol, lenght) {
 
   const finalyPasswd = gPasswd.slice(0, lenght);
   return finalyPasswd;
-}
+};
 
 btnCopy.addEventListener("click", () => {
   navigator.clipboard.writeText(result.value);
