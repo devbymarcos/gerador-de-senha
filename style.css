@@ -58,7 +58,7 @@ input[type="number"] {
   border: 1px solid #ccc;
   border-radius: 3px;
   text-align: center;
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   padding: 10px 10px;
   outline: none;
 }
@@ -70,7 +70,7 @@ input[type="number"] {
   border: none;
   cursor: pointer;
   color: #ffffff;
-  font-size: 1.9em;
+  font-size: 1.3rem;
   font-weight: bold;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
   border-radius: 5px;
@@ -124,5 +124,5 @@ input[type="checkbox"] {
   height: 21px;
 }
 label {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
